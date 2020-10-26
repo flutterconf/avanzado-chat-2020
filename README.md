@@ -1,4 +1,4 @@
-# Reto avanzado de Flutter in the Dark 2002
+# Reto avanzado de Flutter in the Dark 2020
 Repositorio con el código base para completar el reto de Flutter in the Dark 2020.
 
 ## Pasos a seguir para completar el reto
