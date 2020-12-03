@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "849645478782",
+    "project_id": "flutter-in-the-dark-jsgala",
+    "storage_bucket": "flutter-in-the-dark-jsgala.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849645478782:android:bc8821689b471fc3a1492f",
+        "android_client_info": {
+          "package_name": "com.example.chat_flutter_in_the_dark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849645478782-vbn2202q4j94ohpmol471qibg501guni.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYpKjwyaehMyClwKCzIEE7O0qRLeUB4fo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849645478782-vbn2202q4j94ohpmol471qibg501guni.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
