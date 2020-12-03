@@ -5,7 +5,7 @@ class MessageModel {
   final String text;
   final String id;
 
-  MessageModel({@required this.text, @required this.id});
+  MessageModel({@required this.text, this.id});
 
   static MessageModel fromSnapshot(DocumentSnapshot snap) {
     return MessageModel(

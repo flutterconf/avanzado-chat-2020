@@ -21,9 +21,9 @@ class ChatModel {
   }
 
   static List<MessageModel> getMessages(List<dynamic> chats) {
-    List<MessageModel> tempChats;
+    List<MessageModel> tempChats = <MessageModel>[];
     for (final chat in chats) {
-      tempChats.add(MessageModel.fromSnapshot(chat));
+      tempChats.add(MessageModel(text: chat));
     }
     return tempChats;
   }
