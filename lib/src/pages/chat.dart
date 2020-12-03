@@ -1,6 +1,6 @@
-import 'package:chat_flutter_in_the_dark/src/models/chat_model.dart';
-import 'package:chat_flutter_in_the_dark/src/models/message_model.dart';
-import 'package:chat_flutter_in_the_dark/src/repositories/chat_repository.dart';
+import 'package:chat_flutter_in_the_dark/src/domain/models.dart';
+import 'package:chat_flutter_in_the_dark/src/repositories/chats/chats_network.dart';
+import 'package:chat_flutter_in_the_dark/src/repositories/chats/chat_repository.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatelessWidget {
@@ -9,7 +9,7 @@ class ChatPage extends StatelessWidget {
   ChatPage({Key key, @required this.chat}) : super(key: key);
 
   final _messageController = TextEditingController();
-  final _chatRepository = ChatRepository();
+  final _chatRepository = ChatRepositoryImpl(ChatNetwork());
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class ChatPage extends StatelessWidget {
             Text('Chat con usuario', style: TextStyle(fontSize: 18)),
             SizedBox(height: 30),
             StreamBuilder<List<MessageModel>>(
-                stream: _chatRepository.getMessages(chat.id),
+                stream: _chatRepository.getMessages(chat.id).asStream(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) return CircularProgressIndicator();
                   if (snapshot.hasError) return Text('error');
