@@ -1,11 +1,20 @@
 import 'package:chat_flutter_in_the_dark/src/app/error_app.dart';
 import 'package:chat_flutter_in_the_dark/src/app/loaded_app.dart';
 import 'package:chat_flutter_in_the_dark/src/app/loading_app.dart';
+import 'package:chat_flutter_in_the_dark/src/provider/chat_provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ChatState()),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
